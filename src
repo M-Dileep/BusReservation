@@ -1,0 +1,48 @@
+
+class Bus
+{
+    private String name;
+
+    Bus(String name)
+    {
+        this.name = name;
+    }
+    public String getBusName()
+    {
+        return this.name;
+    }
+}
+
+
+class Passenger
+{
+    private String name;
+
+    private int seatId;
+    Passenger(String name, int seatId)
+    {
+        this.name = name;
+        this.seatId = seatId;
+    }
+    public String getPassengerName()
+    {
+        return this.name;
+    }
+    public int getPassengerId()
+    {
+        return this.seatId;
+    }
+}
+
+//Association between both the
+//classes in the main method
+class Demo
+{
+    public static void main (String[] args)
+    {
+        Bus bus = new Bus("Airavata");
+        Passenger psg = new Passenger("Chinnu", 14);
+        System.out.println(psg.getPassengerName() + " with seat number " + psg.getPassengerId()
+                + " is a passenger of " + bus.getBusName());
+    }
+}
